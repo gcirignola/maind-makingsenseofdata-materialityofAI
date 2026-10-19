@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Materialities of AI: reverse engineering as a lens</title>
+<meta name="description" content="Interactive map of case studies on the materialities of AI: environment, resources, people and labour, embodiment and economy, with reverse engineering as a lens.">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Materialities of AI: reverse engineering as a lens</h1>
+<p class="sub">Five dimensions, 30 sub-topics, 58 real cases and 2 research gaps, with the economy as the deepest branch. Hover a dot (tap on a touch screen) for a quick description, then click it (tap again) to open the source site. Every case states its own link to AI's material or economic footprint. Ringed dots are cases where reverse engineering is the phenomenon itself, dashed lines are secondary links, and dashed circles are research gaps.</p>
+<div class="chips" id="chips"></div>
+</header>
+<main>
+<div id="stage"><svg id="map" role="img" aria-label="Network map of AI materiality dimensions, sub-topics and case studies"></svg><div id="card" role="dialog" aria-label="Case summary"></div></div>
+<aside id="panel" aria-live="polite"></aside>
+</main>
+<noscript>This map needs JavaScript to run.</noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

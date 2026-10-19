@@ -1,0 +1,45 @@
+:root{--bg:#eef1f4;--fg:#16202b;--mut:#5b6773;--card:#fff;--line:#d3d9df;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161b;--fg:#e8edf2;--mut:#9aa6b2;--card:#1b2128;--line:#2c353f}}
+:root[data-theme="dark"]{--bg:#12161b;--fg:#e8edf2;--mut:#9aa6b2;--card:#1b2128;--line:#2c353f}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font:14px/1.5 "Public Sans",system-ui,sans-serif}
+header{padding:14px 18px 10px;border-bottom:1px solid var(--line)}
+h1{font-size:18px;margin:0 0 2px;font-weight:700}
+.sub{margin:0 0 10px;color:var(--mut);font-size:12.5px;max-width:100ch}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:3px 11px 3px 8px;font:inherit;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.chip i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.chip[aria-pressed="false"]{opacity:.45}
+.chip.re{border-width:2px;border-color:var(--fg)}
+.chip.re i{background:none;border:2px solid var(--fg);box-sizing:border-box}
+.chip.re[aria-pressed="false"]{opacity:1;border-width:1px;border-color:var(--line)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+main{flex:1;display:flex;min-height:0}
+#stage{position:relative;flex:1;min-width:0;display:flex}
+#map{flex:1;min-width:0;min-height:760px;cursor:grab;touch-action:none}
+#card{position:absolute;z-index:5;width:292px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;box-shadow:0 6px 22px rgba(0,0,0,.2);display:none}
+#card h4{margin:0 18px 4px 0;font-size:14px;padding-left:8px;border-left:4px solid var(--c)}
+#card p{margin:5px 0;font-size:13px}
+#card .x{position:absolute;top:4px;right:6px;border:0;background:none;color:var(--mut);font-size:20px;line-height:1;cursor:pointer}
+.go{display:inline-block;margin:2px 12px 2px 0}
+aside{width:360px;max-width:100%;border-left:1px solid var(--line);background:var(--card);padding:16px 18px;overflow:auto;max-height:calc(100vh - 120px)}
+aside h2{font-size:16px;margin:0 0 4px;padding-left:10px;border-left:4px solid var(--c,var(--fg))}
+aside h3{font-size:13px;margin:14px 0 4px}
+aside p{margin:4px 0}
+.q{color:var(--mut)}
+.tag{display:inline-block;border:1px solid var(--c,var(--line));border-radius:4px;padding:0 6px;margin:0 4px 4px 0;font-size:12px}
+.li{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:6px 0;color:var(--fg);font:inherit;cursor:pointer}
+.li:hover{text-decoration:underline}
+a{color:var(--fg);font-weight:600}
+.l{fill:none;stroke-width:1.4}
+.n{cursor:pointer}
+.n circle{stroke:var(--bg);stroke-width:2}
+.n.re circle{stroke:var(--fg);stroke-width:2.5}
+.n.gap circle{fill:none;stroke:var(--mut);stroke-dasharray:3 3;stroke-width:1.5}
+.n text{fill:var(--fg);paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round;text-anchor:middle;pointer-events:none}
+.n.k text{font-size:10px}.n.s text{font-size:11.5px;font-weight:600}.n.d text{font-size:13px;font-weight:700}.n.hub text{font-size:13px;font-weight:700}
+.n.hub circle{fill:var(--fg)}
+.lk{display:inline-flex;align-items:center;gap:6px;margin:2px 10px 2px 0;flex-wrap:wrap}
+.cp{font:inherit;font-size:11px;border:1px solid var(--line);background:none;color:var(--mut);border-radius:4px;padding:0 6px;cursor:pointer}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:13px;max-width:90vw;z-index:20;display:none}
+@media (max-width:760px){main{flex-direction:column}aside{width:auto;border-left:0;border-top:1px solid var(--line);max-height:none}#card{position:fixed;left:8px!important;right:8px;top:auto!important;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto}}
